@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Portfolio</title>
+
+    <style>
+      /* Add your CSS styles here */
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      section {
+        padding: 2rem;
+      }
+
+      section h1,
+      section h2 {
+        color: #333;
+      }
+
+      /* Add more CSS styles for your sections and portfolio items as needed */
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Your introduction goes here.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Your personal information and bio go here.</p>
+    </section>
+
+    <section id="resume">
+      <h2>My Resume</h2>
+      <p>Include your resume content here.</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <!-- Add your portfolio projects here -->
+      <div class="portfolio-item">
+        <img src="project1.jpg" alt="Project 1" />
+        <h3>Project 1</h3>
+        <p>Description of Project 1.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="project2.jpg" alt="Project 2" />
+        <h3>Project 2</h3>
+        <p>Description of Project 2.</p>
+      </div>
+      <!-- Add more portfolio items as needed -->
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out to me:</p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
